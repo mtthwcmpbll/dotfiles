@@ -11,5 +11,7 @@ ln -svi "$HOME/dotfiles/.zshrc" ~
 # Install some standard tools with Homebrew
 xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install bash-completion wget git mercurial maven
+brew tap caskroom/cask
+brew tap cloudfoundry/tap
+brew install bash-completion wget git mercurial maven cf-cli
 brew install go || true
