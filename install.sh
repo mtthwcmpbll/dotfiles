@@ -13,5 +13,5 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/cask
 brew tap cloudfoundry/tap
-brew install bash-completion wget git mercurial maven cf-cli
+brew install bash-completion wget git mercurial maven cf-cli rbenv
 brew install go || true

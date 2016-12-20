@@ -1,6 +1,9 @@
 # General shell environment variables
 source ~/.env
 
+# Source any user secrets
+source ~/.secrets
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -27,6 +30,7 @@ source $ZSH/oh-my-zsh.sh
 
 export HISTSIZE=100000 SAVEHIST=100000
 
+mkdir -p "$HOME/.zsh_logs"
 function precmd() {
     if [ "$(id -u)" -ne 0 ]; then
         FULL_CMD_LOG="$HOME/.zsh_logs/zsh-history-$(date -u "+%Y-%m-%d").log"
