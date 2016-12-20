@@ -1,0 +1,8 @@
+# This file handles setup and sources of various shell tools.
+
+# rbenv for managing Ruby environments
+eval "$(rbenv init -)"
+
+# SdkMan for managing various Java frameworks and tools
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

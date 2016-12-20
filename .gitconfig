@@ -1,0 +1,11 @@
+[user]
+	name = Matthew Campbell
+	email = mjc4648@gmail.com
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = ~/.gitignore_global
+[alias]
+	st = status
+	glog = log --graph --all --oneline
+	gglog = log --graph --all
