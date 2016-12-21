@@ -45,3 +45,6 @@ function precmd() {
 source ~/.aliases
 
 source ~/.tools
+
+# Warn if the dotfiles repo has uncommitted changes
+[[ $(git --git-dir=$DOTFILES_DIR/.git --work-tree=$DOTFILES_DIR status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "$fg[yellow]⚠️  You have uncommitted changes in your dotfiles repository!$reset_color"
