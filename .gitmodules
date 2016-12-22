@@ -1,3 +1,0 @@
-[submodule ".zsh-custom/plugins/cf-autcomplete-plugin"]
-	path = .zsh-custom/plugins/cf-autcomplete-plugin
-	url = https://github.com/Dannyzen/cf-zsh-autocomplete-plugin.git
