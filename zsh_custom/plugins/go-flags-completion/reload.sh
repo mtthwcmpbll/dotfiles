@@ -1,0 +1,2 @@
+unfunction _goflags_complete
+autoload -U _goflags_complete

@@ -5,6 +5,8 @@ unalias fs &> /dev/null
 alias fs="hadoop fs"
 unalias hls &> /dev/null
 alias hls="fs -ls"
+alias postgres_start="pg_ctl -D /usr/local/var/postgres start"
+alias mysql_start="mysql.server start"
 
 # Conveniently inspect an LZOP compressed file from the command
 # line; run via:
@@ -16,3 +18,13 @@ alias hls="fs -ls"
 lzohead () {
     hadoop fs -cat $1 | lzop -dc | head -1000 | less
 }
+
+alias tf-graph="terraform graph | dot -Tpng -oterraform.png && open terraform.png"
+alias tf-plan="terraform plan -var-file $USER.secret.tfvars"
+alias tf-apply="terraform apply -var-file $USER.secret.tfvars"
+alias tf-destroy="terraform destroy -var-file $USER.secret.tfvars"
+
+# Convenient Docker aliases
+alias start_jenkins="docker run -p 8080:8080 -p 50000:50000 -v /Users/mcampbell/data/jenkins:/var/jenkins_home jenkins"
+
+alias mvn_mkmod="mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=RELEASE"

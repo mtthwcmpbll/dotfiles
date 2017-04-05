@@ -21,7 +21,7 @@ ZSH_CUSTOM=$DOTFILES_DIR/zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cf)
+plugins=(git cf go-flags-completion)
 
 # Load Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
@@ -46,8 +46,12 @@ source ~/.aliases
 
 source ~/.tools
 
+# Set up a local maven installation if older 2.x is needed
+# export M2_HOME=$HOME/Applications/apache-maven-2.2.1
+# export PATH=$M2_HOME/bin:$PATH
+
 # Configure a custom location for zsh autocompletions
-#fpath=($fpath $DOTFILES_DIR/.zsh-custom/completions)
+fpath=($fpath $DOTFILES_DIR/zsh_custom/completions)
 
 # Warn if the dotfiles repo has uncommitted changes
 [[ $(git --git-dir=$DOTFILES_DIR/.git --work-tree=$DOTFILES_DIR status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "$fg[yellow]⚠️  You have uncommitted changes in your dotfiles repository!$reset_color"
