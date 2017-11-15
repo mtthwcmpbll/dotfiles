@@ -6,3 +6,6 @@ eval "$(rbenv init -)"
 # SdkMan for managing various Java frameworks and tools
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# added by Anaconda installer
+export PATH="$HOME/anaconda/bin:$PATH"
