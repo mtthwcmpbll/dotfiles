@@ -1,12 +1,18 @@
 [user]
 	name = Matthew Campbell
 	email = mjc4648@gmail.com
+	signingkey = F0250745A7819840
 [credential]
 	helper = osxkeychain
 [core]
 	excludesfile = ~/.gitignore_global
+	hooksPath = ~/projects/pivotal-cf/git-hooks-core
 [alias]
 	st = status
 	glog = log --graph --all --oneline
 	gglog = log --graph --all
 	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+[push]
+	followTags = true
+[commit]
+	gpgsign = true

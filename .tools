@@ -9,3 +9,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # added by Anaconda installer
 export PATH="$HOME/anaconda/bin:$PATH"
+
+export GPG_TTY=$(tty)

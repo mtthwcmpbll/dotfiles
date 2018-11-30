@@ -19,5 +19,12 @@ brew install bash-completion wget git mercurial maven rbenv
 brew install cf-cli || true
 brew install go || true
 
+# Install the git cred-alert hooks
+wget https://s3.amazonaws.com/cred-alert/cli/current-release/cred-alert-cli_darwin -O /usr/local/bin/cred-alert-cli
+chmod +x /usr/local/bin/cred-alert-cli
+cred-alert-cli update
+mkdir -p $HOME/projects/pivotal-cf
+git clone https://github.com/pivotal-cf/git-hooks-core.git $HOME/projects/pivotal-cf/git-hooks-core
+
 git -C $BASEDIR submodule init
 git -C $BASEDIR submodule update
