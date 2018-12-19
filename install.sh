@@ -9,6 +9,8 @@ ln -svi "$BASEDIR/.gitconfig" ~
 ln -svi "$BASEDIR/.gitignore_global" ~
 ln -svi "$BASEDIR/.tools" ~
 ln -svi "$BASEDIR/.zshrc" ~
+ln -svi "$BASEDIR/.tmux.conf" ~
+ln -svi "$BASEDIR/.tmux.mac.conf" ~
 
 # Install some standard tools with Homebrew
 xcode-select --install
@@ -18,6 +20,7 @@ brew tap cloudfoundry/tap
 brew install bash-completion wget git mercurial maven rbenv
 brew install cf-cli || true
 brew install go || true
+brew install tmux || true
 
 # Install the git cred-alert hooks
 wget https://s3.amazonaws.com/cred-alert/cli/current-release/cred-alert-cli_darwin -O /usr/local/bin/cred-alert-cli
