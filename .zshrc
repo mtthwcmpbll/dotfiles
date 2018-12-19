@@ -9,7 +9,8 @@ export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
-ZSH_THEME="wolfe"
+ZSH_THEME="spaceship"
+SPACESHIP_KUBECONTEXT_SHOW=false
 
 # Enable command auto-correction.
 ENABLE_CORRECTION="false"

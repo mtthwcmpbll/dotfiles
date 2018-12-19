@@ -10,6 +10,7 @@
 [alias]
 	st = status
 	glog = log --graph --all --oneline
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	gglog = log --graph --all
 	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 [push]

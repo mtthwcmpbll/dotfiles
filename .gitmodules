@@ -1,3 +1,6 @@
 [submodule "zsh_custom/plugins/cf"]
 	path = zsh_custom/plugins/cf
 	url = https://github.com/dannyzen/cf-zsh-autocomplete-plugin.git
+[submodule "zsh_custom/themes/spaceship-prompt"]
+	path = zsh_custom/themes/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
