@@ -14,13 +14,20 @@ ln -svi "$BASEDIR/.tmux.mac.conf" ~
 
 # Install some standard tools with Homebrew
 xcode-select --install
+
+# Install Homebrew for package management
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/cask
 brew tap cloudfoundry/tap
-brew install bash-completion wget git mercurial maven rbenv
+brew tap caskroom/fonts
+brew install bash-completion wget git maven
 brew install cf-cli || true
 brew install go || true
 brew install tmux || true
+brew install font-fira-code
+
+# Install NVM for node management
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 # Install the git cred-alert hooks
 wget https://s3.amazonaws.com/cred-alert/cli/current-release/cred-alert-cli_darwin -O /usr/local/bin/cred-alert-cli
