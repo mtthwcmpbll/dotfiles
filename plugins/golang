@@ -1,0 +1,2 @@
+export GOPATH=$PROJECTS_HOME/go
+export PATH=$GOPATH/bin:$PATH

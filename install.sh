@@ -7,7 +7,7 @@ ln -svi "$BASEDIR/.bashrc" ~
 ln -svi "$BASEDIR/.env" ~
 ln -svi "$BASEDIR/.gitconfig" ~
 ln -svi "$BASEDIR/.gitignore_global" ~
-ln -svi "$BASEDIR/.tools" ~
+ln -svi "$BASEDIR/.plugins" ~
 ln -svi "$BASEDIR/.zshrc" ~
 ln -svi "$BASEDIR/.tmux.conf" ~
 ln -svi "$BASEDIR/.tmux.mac.conf" ~
@@ -16,15 +16,22 @@ ln -svi "$BASEDIR/.tmux.mac.conf" ~
 xcode-select --install
 
 # Install Homebrew for package management
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/cask
-brew tap cloudfoundry/tap
-brew tap caskroom/fonts
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew tap homebrew/cask-cask
+
 brew install bash-completion wget git maven
-brew install cf-cli || true
 brew install go || true
 brew install tmux || true
-brew install font-fira-code
+
+brew tap AdoptOpenJDK/openjdk
+brew cask install adoptopenjdk11
+
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
+
+brew tap cloudfoundry/tap
+brew install cf-cli || true
 
 # Install NVM for node management
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash

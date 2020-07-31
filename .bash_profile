@@ -7,11 +7,13 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # General shell environment variables
 source ~/.env
 
+source ~/.secrets
+
 # General shell aliass
 source ~/.aliases
 
 # General shell tool setup
-source ~/.tools
+source ~/.plugins
 
 # Bash interactive shell configuration
 source ~/.bashrc
@@ -20,5 +22,3 @@ source ~/.bashrc
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
-
-source ~/.secrets

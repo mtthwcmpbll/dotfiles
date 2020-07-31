@@ -1,7 +1,7 @@
 [user]
 	name = Matthew Campbell
-	email = mjc4648@gmail.com
-	signingkey = F0250745A7819840
+	email = mjcampbell@vmware.com
+	signingkey = TODO
 [credential]
 	helper = osxkeychain
 [core]
@@ -17,3 +17,7 @@
 	followTags = true
 [commit]
 	gpgsign = true
+[pager]
+	branch = false
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2

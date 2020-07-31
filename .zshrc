@@ -45,11 +45,7 @@ function precmd() {
 # For a full list of active aliases, run `alias`.
 source ~/.aliases
 
-source ~/.tools
-
-# Set up a local maven installation if older 2.x is needed
-# export M2_HOME=$HOME/Applications/apache-maven-2.2.1
-# export PATH=$M2_HOME/bin:$PATH
+source ~/.plugins
 
 # Configure a custom location for zsh autocompletions
 fpath=($fpath $DOTFILES_DIR/zsh_custom/completions)
