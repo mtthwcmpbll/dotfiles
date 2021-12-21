@@ -1,0 +1,9 @@
+#brew install buildpacks/tap/pack
+#brew tap vmware-tanzu/carvel
+#brew install ytt kbld kapp imgpkg kwt vendir
+#brew install minikube docker docker-machine-driver-vmware
+
+alias k="kubectl"
+alias kns="kubectl config set-context --current --namespace "
+
+eval $(minikube docker-env)

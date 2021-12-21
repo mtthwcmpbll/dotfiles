@@ -1,9 +1,11 @@
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
+export JAVA_HOME=`/usr/libexec/java_home -v 11.0.12`
 export MAVEN_OPTS="-Xms128m -Xmx512m"
 export PATH=$JAVA_HOME/bin:/usr/local/bin:$HOME/bin:$PATH
 
-# SdkMan for managing various Java frameworks and tools
-#export SDKMAN_DIR="$HOME/.sdkman"
-#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export GRAALVM_HOME="${JAVA_HOME}"
 
 alias mvn_mkmod="mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=RELEASE"
