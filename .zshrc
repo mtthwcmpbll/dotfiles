@@ -52,3 +52,10 @@ fpath=($fpath $DOTFILES_DIR/zsh_custom/completions)
 
 # Warn if the dotfiles repo has uncommitted changes
 [[ $(git --git-dir=$DOTFILES_DIR/.git --work-tree=$DOTFILES_DIR status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "$fg[yellow]⚠️  You have uncommitted changes in your dotfiles repository!$reset_color"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+#brew install buildpacks/tap/pack
+. $(pack completion --shell zsh)
+

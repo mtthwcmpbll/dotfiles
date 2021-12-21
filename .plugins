@@ -1,3 +1,9 @@
 echo "Loading plugins..."
 
 source $DOTFILES_DIR/plugins/java
+source $DOTFILES_DIR/plugins/nodejs
+source $DOTFILES_DIR/plugins/python
+source $DOTFILES_DIR/plugins/golang
+source $DOTFILES_DIR/plugins/rustlang
+source $DOTFILES_DIR/plugins/kubernetes
+source $DOTFILES_DIR/plugins/gcloud

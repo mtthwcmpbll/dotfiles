@@ -10,6 +10,3 @@ alias tf-destroy="terraform destroy -var-file $USER.secret.tfvars"
 
 # Convenient Docker aliases
 alias start_jenkins="docker run -p 8080:8080 -p 50000:50000 -v /Users/mcampbell/data/jenkins:/var/jenkins_home jenkins"
-
-# Kubernetes aliases
-alias k="kubectl"
