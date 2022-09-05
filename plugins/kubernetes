@@ -5,5 +5,8 @@
 
 alias k="kubectl"
 alias kns="kubectl config set-context --current --namespace "
+alias debugpod="kubectl run -i --tty --rm debug --image=busybox --restart=Never -- sh"
 
-eval $(minikube docker-env)
+export PATH="/Applications/VMware OVF Tool":$PATH
+
+# eval $(minikube docker-env)
